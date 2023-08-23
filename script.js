@@ -1,5 +1,3 @@
-const url =
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle";
 const options = {
   method: "GET",
   headers: {
@@ -8,10 +6,13 @@ const options = {
   },
 };
 
-async function getWatherAPi(city) {
+const getWatherAPi = async (city) => {
   try {
     cityName.innerHTML = city;
-    const response = await fetch(url, options);
+    const response = await fetch(
+      "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city,
+      options
+    );
     const data = await response.json();
     cloud_pct.innerHTML = data.cloud_pct;
     temp.innerHTML = data.temp;
@@ -28,11 +29,11 @@ async function getWatherAPi(city) {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-// submit.addEventListnear("click", (e) => {
-//   e.preventDefault();
-//   getWatherAPi(city.value);
-// });
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  getWatherAPi(city.value);
+});
 
-getWatherAPi();
+getWatherAPi("Delhi");
