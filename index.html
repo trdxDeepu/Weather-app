@@ -74,71 +74,73 @@
       <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary ">
                 <h4 class="my-0 fw-normal">Temratures</h4>
               </div>
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">
-                  $0<small class="text-body-secondary fw-light">/mo</small>
+                  <span id="temp2"></span><small class="text-body-secondary fw-light"><span>&#8451;</span></small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>Temprature is <span id="temp"></span></li>
                   <li>Max Temprature is <span id="max_temp"></span></li>
                   <li>Min Temprature is <span id="min_temp"></span></li>
                 </ul>
-                <button
+                <!-- <button
                   type="button"
                   class="w-100 btn btn-lg btn-outline-primary"
                 >
                   Sign up for free
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Humidity Info</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $15<small class="text-body-secondary fw-light">/mo</small>
-                </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Wind Degree is <span id="wind_degrees"></span></li>
-                  <li>Wind_speed is <span id="wind_speed"></span></li>
-                  <li>Humidity is <span id="humidity"></span></li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">
-                  Get started
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm border-primary">
               <div class="card-header py-3 text-bg-primary border-primary">
-                <h4 class="my-0 fw-normal">Sunrise and Sunset info</h4>
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light">km/hr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  
+                  <li>Wind Degree is <span id="wind_degrees"></span></li>
+                  <li>Humidity is <span id="humidity"></span></li>
+                  <li>Feels like is <span id="feels_like"></span></li>
+                </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">
+                  Get started
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
               </div>
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">
-                  $29<small class="text-body-secondary fw-light">/mo</small>
+                  <span id="wind_speed2"></span><small class="text-body-secondary fw-light">Km/hr</small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li>Feels like is <span id="feels_like"></span></li>
+                  
+                  <li>Wind_speed is <span id="wind_speed"></span></li>
                   <li>Sun rise is <span id="sunrise"></span></li>
                   <li>Sun set is <span id="sunset"></span></li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">
                   Contact us
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
         </div>
 
-        <h2 class="display-6 text-center mb-4">Weather of Other Cities</h2>
+        <div class="container border-primary card-header rounded-4 shadow-sm ">
+        <h2 class="display-6 text-center mb-4 ">Weather of Other Cities</h2>
 
         <div class="table-responsive">
           <table class="table text-center">
@@ -218,6 +220,8 @@
             </tbody>
           </table>
         </div>
+        </main>
+      </div>
       </main>
     </div>
 

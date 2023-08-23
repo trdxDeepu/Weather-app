@@ -16,11 +16,14 @@ const getWatherAPi = async (city) => {
     const data = await response.json();
     // cloud_pct.innerHTML = data.cloud_pct;
     temp.innerHTML = data.temp;
+    temp2.innerHTML = data.temp;
     feels_like.innerHTML = data.feels_like;
     humidity.innerHTML = data.humidity;
     min_temp.innerHTML = data.min_temp;
     max_temp.innerHTML = data.max_temp;
     wind_speed.innerHTML = data.wind_speed;
+    wind_speed2.innerHTML = data.wind_speed;
+    humidity2.innerHTML = data.humidity;
     wind_degrees.innerHTML = data.wind_degrees;
     sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
     sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
@@ -35,6 +38,15 @@ submit.addEventListener("click", (e) => {
   e.preventDefault();
   getWatherAPi(city.value);
 });
+
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const city = item.innerHTML;
+    getWatherAPi(city);
+  });
+});
+
 
 getWatherAPi("Delhi");
 
@@ -76,7 +88,7 @@ const getJapanWeather = async () => {
     japan_max_temp.innerHTML = data.max_temp;
     japan_wind_speed.innerHTML = data.wind_speed;
     japan_wind_degrees.innerHTML = data.wind_degrees;
-    japan_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
+    japan_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h23' });
     japan_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
 
     console.log(data);
@@ -110,7 +122,7 @@ const getBostonWeather = async () => {
 const getNewYorkWeather = async () => {
   try {
     const response = await fetch(
-      "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Boston",
+      "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=New York",
       options
     );
     const data = await response.json();
