@@ -14,14 +14,14 @@ const getWatherAPi = async (city) => {
       options
     );
     const data = await response.json();
-    cloud_pct.innerHTML = data.cloud_pct;
+    // cloud_pct.innerHTML = data.cloud_pct;
     temp.innerHTML = data.temp;
     feels_like.innerHTML = data.feels_like;
     humidity.innerHTML = data.humidity;
     min_temp.innerHTML = data.min_temp;
     max_temp.innerHTML = data.max_temp;
     wind_speed.innerHTML = data.wind_speed;
-    wind_degree.innerHTML = data.wind_degree;
+    wind_degrees.innerHTML = data.wind_degrees;
     sunrise.innerHTML = data.sunrise;
     sunset.innerHTML = data.sunset;
 
