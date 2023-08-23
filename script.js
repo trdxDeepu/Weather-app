@@ -25,8 +25,12 @@ const getWatherAPi = async (city) => {
     wind_speed2.innerHTML = data.wind_speed;
     humidity2.innerHTML = data.humidity;
     wind_degrees.innerHTML = data.wind_degrees;
-    sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
-    sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
+    sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString("en-US", {
+      hourCycle: "h12",
+    });
+    sunset.innerHTML = new Date(data.sunset).toLocaleTimeString("en-US", {
+      hourCycle: "h12",
+    });
 
     console.log(data);
   } catch (error) {
@@ -39,14 +43,13 @@ submit.addEventListener("click", (e) => {
   getWatherAPi(city.value);
 });
 
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-dropdownItems.forEach(item => {
-  item.addEventListener('click', () => {
+const dropdownItems = document.querySelectorAll(".dropdown-item");
+dropdownItems.forEach((item) => {
+  item.addEventListener("click", () => {
     const city = item.innerHTML;
     getWatherAPi(city);
   });
 });
-
 
 getWatherAPi("Delhi");
 
@@ -65,8 +68,14 @@ const getShanghaiWeather = async () => {
     shanghai_max_temp.innerHTML = data.max_temp;
     shanghai_wind_speed.innerHTML = data.wind_speed;
     shanghai_wind_degrees.innerHTML = data.wind_degrees;
-    shanghai_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
-    shanghai_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
+    shanghai_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
+    shanghai_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
 
     console.log(data);
   } catch (error) {
@@ -88,8 +97,13 @@ const getJapanWeather = async () => {
     japan_max_temp.innerHTML = data.max_temp;
     japan_wind_speed.innerHTML = data.wind_speed;
     japan_wind_degrees.innerHTML = data.wind_degrees;
-    japan_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h23' });
-    japan_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
+    japan_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h23" }
+    );
+    japan_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString("en-US", {
+      hourCycle: "h12",
+    });
 
     console.log(data);
   } catch (error) {
@@ -111,8 +125,14 @@ const getBostonWeather = async () => {
     Boston_max_temp.innerHTML = data.max_temp;
     Boston_wind_speed.innerHTML = data.wind_speed;
     Boston_wind_degrees.innerHTML = data.wind_degrees;
-    Boston_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
-    Boston_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12' });
+    Boston_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
+    Boston_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
 
     console.log(data);
   } catch (error) {
@@ -134,19 +154,20 @@ const getNewYorkWeather = async () => {
     NewYork_max_temp.innerHTML = data.max_temp;
     NewYork_wind_speed.innerHTML = data.wind_speed;
     NewYork_wind_degrees.innerHTML = data.wind_degrees;
-    NewYork_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString('en-US', { hourCycle: 'h12' });
-    NewYork_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString('en-US', { hourCycle: 'h12'});
-
-
+    NewYork_sunrise.innerHTML = new Date(data.sunrise).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
+    NewYork_sunset.innerHTML = new Date(data.sunset).toLocaleTimeString(
+      "en-US",
+      { hourCycle: "h12" }
+    );
 
     console.log(data);
   } catch (error) {
     console.log(error);
   }
 };
-
-
-
 
 getShanghaiWeather();
 getJapanWeather();
